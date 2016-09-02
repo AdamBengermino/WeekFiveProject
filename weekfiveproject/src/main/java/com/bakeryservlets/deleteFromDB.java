@@ -38,9 +38,11 @@ public class deleteFromDB extends HttpServlet
 	
 		deleteFromDB.setBakeryID(request.getParameter("bakery_id"));
 	
-		DAO.deleteFromDB(deleteFromDB);
+		DAO.deleteFromDB(Integer.parseInt(deleteFromDB.getBakeryID()));
 	
-		request.getRequestDispatcher("readDB.jsp").forward(request, response);
+		request.getRequestDispatcher("delete.jsp").forward(request, response);
+		
+	        
 	
 	}
 

@@ -115,21 +115,21 @@ public class DAO
 
 	} // write
 	
-	private static String delFromDB = " DELETE FROM `bakery`.`bakery`" + " WHERE " + "bakery_id" + "= ?"; 
+	private static String delFromDB(int id)
+	{
+        return "DELETE FROM `bakery`.`bakery` WHERE bakery_id = " + id + ";";  
+    } 
 	
-	public static void deleteFromDB(Bakery bakery)
+	public static void deleteFromDB(int id)
 	{
 		Bakery itemToDelete = new Bakery();
-		
-		itemToDelete = bakery;
 		
 		connToDB();
 
 		try 
 		{
 			
-			PREP_STMT = CONN.prepareStatement(delFromDB);
-			PREP_STMT.setString(1, itemToDelete.getBakeryID());
+			PREP_STMT = CONN.prepareStatement(delFromDB(id));
 			PREP_STMT.executeUpdate();
 			
 		} 
@@ -144,12 +144,12 @@ public class DAO
 	
 	private static String updateDB = "UPDATE `bakery`.`bakery`"
 			+ "SET"
-			+ " bakery_id= ?, type= ?, calories= ?, price= ?, topping= ?"
+			+ " bakery_id=?,  type= ?, calories= ?, price= ?, topping= ?"
 			+ " WHERE "
-			+ "`bakery_id`"
+			+ "bakery_id"
 			+ "= ?";
-	
-	public static void updateDB() 
+
+	public static void updateDB(Bakery bakery) 
 	{
 
 		Bakery itemToUpdate = new Bakery();

@@ -50,7 +50,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="readDB.jsp">View Database</a></li>
 				<li><a href="addToDB.html">Add Item</a></li>
-				<li><a href="deleteFromDB.html">Delete Item</a></li>
+				<li><a href="delete.jsp">Delete Item</a></li>
 				<li><a href="updateDB.html">Update Item</a></li>
 			</ul>
 		</div>
@@ -60,7 +60,7 @@
 
 	<h1>Delicious Desserts Ooh La La</h1>
 						
-						<table style="background-color: white">
+						<table class="table table-hover" style="background-color: white">
 							<tr>
 								<th>Bakery ID</th>
 								<th>Type</th>

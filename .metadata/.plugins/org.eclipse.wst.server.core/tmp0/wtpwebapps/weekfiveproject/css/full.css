@@ -17,3 +17,31 @@ body {
     background-size: cover;
     -o-background-size: cover;
 }
+
+.table-nonfluid {
+    width: auto !important;
+}
+
+tr {
+    border: 3px solid #CAB8BA ;
+    font-size: 0.875em;
+    
+}
+
+h1{
+    color: #FC7380 ;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-shadow: 4px 4px #F0000C ;
+}
+  
+label{
+    color: #CAB8BA ;
+    font-size: 1.875em;
+    font-weight: bold;
+    text-shadow: 4px 4px #663300 ;
+}
+
+.tablehover{
+	margin-left: 5em; 
+}

@@ -1,7 +1,0 @@
-package com.weekfiveproject;
-
-import java.sql.*; 
-
-public class DAO {
-
-}

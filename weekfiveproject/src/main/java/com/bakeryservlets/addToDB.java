@@ -20,7 +20,8 @@ public class addToDB extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public addToDB() {
+    public addToDB() 
+    {
         super();
         // TODO Auto-generated constructor stub
     }
